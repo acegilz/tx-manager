@@ -129,7 +129,7 @@ class Transaction {
       }
     }
     if (!this.tx.gasPrice) {
-      this.tx.gasPrice = await this._getGasPrice('fast')
+      this.tx.gasPrice = await this._getGasPrice('slow')
     }
     if (!this.manager._nonce) {
       this.manager._nonce = await this._getLastNonce()
